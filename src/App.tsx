@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import { useState } from "react";
+
 import './App.css';
-import HelloWorld from './HelloWorld';
+import Card from "./components/Card";
+import Post from './components/Post';
+import SideBar from './components/SideBar';
 
 function App() {
+
+  const [post] = useState({
+    title: 'Título Maneiro',
+    content: 'Lorem Ipsum dolor sit amet'
+  })
+
   return (
     <div className="App">
       <header className="App-header">
-        <HelloWorld/>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Card title={"a"}>
+          <Post post={post} totalComments={12}/>
+        </Card>
       </header>
     </div>
   );
