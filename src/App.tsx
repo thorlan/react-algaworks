@@ -1,9 +1,9 @@
 import { useState } from "react";
-
 import './App.css';
 import Card from "./components/Card";
+import Form from "./components/Form";
 import Post from './components/Post';
-import SideBar from './components/SideBar';
+
 
 function App() {
 
@@ -15,9 +15,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Card title={"a"}>
+       
+       {/*  <Card title={"a"}>
           <Post post={post} totalComments={12}/>
-        </Card>
+        </Card> */}
+
+        <Form/>
+        
       </header>
     </div>
   );
